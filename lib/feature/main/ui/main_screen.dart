@@ -6,6 +6,7 @@ import 'package:versta/utils/colors.dart';
 import 'package:versta/widgets/buttons/inline_button.dart';
 
 import '../../intro/ui/intro_screen.dart';
+import 'package:versta/widgets/buttons/button.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -97,7 +98,11 @@ class _MainScreenState extends State<MainScreen> {
             const SizedBox(
               height: 120,
             ),
-            // KeysPage()
+            KeysPage(),
+            const SizedBox(
+              height: 120,
+            ),
+            FeedbackPage(),
           ],
         ),
       ),

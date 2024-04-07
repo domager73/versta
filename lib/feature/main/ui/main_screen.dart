@@ -75,25 +75,42 @@ class _MainScreenState extends State<MainScreen> {
             SizedBox(
               width: sizeof.width,
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Container(
               height: 20,
               alignment: Alignment.center,
               width: sizeof.width * 0.7,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: ['ГЛАВНАЯ', '3-6 ЛЕТ', '1-4 КЛАСС', '5-11 КЛАСС', 'ВЗРОСЛЫЕ', 'ДОП. КУРСЫ', 'АКЦИИ', 'О НАС'].map((e) => Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Text(
-                        e,
-                        style: const TextStyle(fontSize: 13),
-                      ),
-                )).toList(),
+                children: [
+                  'ГЛАВНАЯ',
+                  '3-6 ЛЕТ',
+                  '1-4 КЛАСС',
+                  '5-11 КЛАСС',
+                  'ВЗРОСЛЫЕ',
+                  'ДОП. КУРСЫ',
+                  'АКЦИИ',
+                  'О НАС'
+                ]
+                    .map((e) => Container(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          child: Text(
+                            e,
+                            style: const TextStyle(fontSize: 13),
+                          ),
+                        ))
+                    .toList(),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             IntroPage(),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             const InfoPage(),
             const SizedBox(
               height: 120,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:versta/utils/colors.dart';
+import 'package:versta/utils/fonts.dart';
 import 'package:versta/widgets/wrapper/wrapper.dart';
 
 class InfoPage extends StatefulWidget {
@@ -14,7 +15,7 @@ class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-    
+
     return Wrapper(      
       child: Wrap(
         children: [
@@ -79,7 +80,7 @@ class InfoItemWidget extends StatelessWidget {
           const SizedBox(
             height: 23,
           ),
-          Text(title),
+          Text(title,),
           const SizedBox(
             height: 23,
           ),

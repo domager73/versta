@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:versta/feature/feedback/ui/feedback_page.dart';
 import 'package:versta/feature/info/ui/info_page.dart';
 import 'package:versta/feature/keys/ui/keys_page.dart';
 
@@ -41,6 +42,10 @@ class _MainScreenState extends State<MainScreen> {
               height: 120,
             ),
             KeysPage(),
+            const SizedBox(
+              height: 120,
+            ),
+            FeedbackPage(),
           ],
         ),
       ),

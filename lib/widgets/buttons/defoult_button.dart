@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:versta/utils/colors.dart';
 
-class CustomInlineButton extends StatelessWidget {
-  const CustomInlineButton(
+class CustomButton extends StatelessWidget {
+  const CustomButton(
       {super.key,
-      required this.text,
-      required this.onTap,
-      this.color,
-      this.height,
-      this.width});
+        required this.text,
+        required this.onTap,
+        this.height,
+        this.width});
 
   final String text;
   final VoidCallback onTap;
   final double? width;
-  final Color? color;
   final double? height;
 
   @override
@@ -21,8 +19,13 @@ class CustomInlineButton extends StatelessWidget {
     return InkWell(
         onTap: onTap,
         child: Container(
-          height: height ?? 67,
-          width: width ?? double.infinity,
+          height: height,
+          width: width,
+          padding: const EdgeInsets.all(5),
+          decoration: BoxDecoration(
+            color: AppColors.buttonBg,
+            borderRadius: BorderRadius.circular(18),
+          ),
           alignment: Alignment.center,
           child: Row(
             mainAxisSize: MainAxisSize.max,
@@ -30,6 +33,9 @@ class CustomInlineButton extends StatelessWidget {
             children: [
               Text(
                 text,
+                style: const TextStyle(
+                  fontSize: 13,
+                ),
               ),
             ],
           ),

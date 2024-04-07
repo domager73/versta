@@ -1,8 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:versta/feature/info/ui/info_page.dart';
+import 'package:versta/feature/keys/ui/keys_page.dart';
 
 import 'package:versta/utils/colors.dart';
+import 'package:versta/widgets/buttons/inline_button.dart';
+
+import '../../intro/ui/intro_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -20,7 +23,9 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         backgroundColor: AppColors.appbar,
         title: Container(
-          width: sizeof.width * 0.6,
+          alignment: Alignment.center,
+          width: sizeof.width * 0.7,
+          padding: const EdgeInsets.symmetric(vertical: 5),
           child: Row(
             children: [
               Container(
@@ -57,7 +62,7 @@ class _MainScreenState extends State<MainScreen> {
                     style: TextStyle(fontSize: 13),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
@@ -69,11 +74,30 @@ class _MainScreenState extends State<MainScreen> {
             SizedBox(
               width: sizeof.width,
             ),
-            InfoPage(),
+            SizedBox(height: 20,),
+            Container(
+              height: 20,
+              alignment: Alignment.center,
+              width: sizeof.width * 0.7,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: ['ГЛАВНАЯ', '3-6 ЛЕТ', '1-4 КЛАСС', '5-11 КЛАСС', 'ВЗРОСЛЫЕ', 'ДОП. КУРСЫ', 'АКЦИИ', 'О НАС'].map((e) => Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                        e,
+                        style: const TextStyle(fontSize: 13),
+                      ),
+                )).toList(),
+              ),
+            ),
+            SizedBox(height: 20,),
+            IntroPage(),
+            SizedBox(height: 20,),
+            const InfoPage(),
             const SizedBox(
               height: 120,
             ),
-            KeysPage(),
+            // KeysPage()
           ],
         ),
       ),

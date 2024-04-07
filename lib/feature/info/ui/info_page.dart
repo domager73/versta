@@ -15,16 +15,22 @@ class _InfoPageState extends State<InfoPage> {
         children: [
           Container(
             padding: const EdgeInsets.all(32),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(40)
-            ),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(40)),
             child: Column(
               children: [
+                Image.asset("icon.svg"),
+                const SizedBox(
+                  height: 23,
+                ),
+                Text("Оценка"),
+                const SizedBox(
+                  height: 23,
+                ),
+                Text("Дадим экспертную оценку текущим знаниям вашего ребенка"),
                 
               ],
             ),
           )
-
         ],
       ),
     );

@@ -14,10 +14,8 @@ class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-
-    return Wrapper(
-
-      
+    
+    return Wrapper(      
       child: Wrap(
         children: [
           InfoItemWidget(

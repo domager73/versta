@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:versta/feature/info/ui/info_page.dart';
+import 'package:versta/feature/keys/ui/keys_page.dart';
 
 import 'package:versta/utils/colors.dart';
 
@@ -21,8 +21,11 @@ class _MainScreenState extends State<MainScreen> {
         backgroundColor: AppColors.appbar,
         title: Row(
           children: [
-            Image.asset('logo.png', width: sizeof.width * 0.2, height: sizeof.width * 0.06,),
-
+            Image.asset(
+              'logo.png',
+              width: sizeof.width * 0.2,
+              height: sizeof.width * 0.06,
+            ),
           ],
         ),
       ),
@@ -30,9 +33,14 @@ class _MainScreenState extends State<MainScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(width: sizeof.width,),
+            SizedBox(
+              width: sizeof.width,
+            ),
             InfoPage(),
-            const SizedBox(height: 120,),
+            const SizedBox(
+              height: 120,
+            ),
+            KeysPage(),
           ],
         ),
       ),

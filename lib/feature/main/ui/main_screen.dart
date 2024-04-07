@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:versta/feature/info/ui/info_page.dart';
 
 import 'package:versta/utils/colors.dart';
-import 'package:versta/widgets/buttons/button.dart';
-import 'package:expandable_menu/expandable_menu.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -68,9 +66,14 @@ class _MainScreenState extends State<MainScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(width: sizeof.width,),
+            SizedBox(
+              width: sizeof.width,
+            ),
             InfoPage(),
-            const SizedBox(height: 120,),
+            const SizedBox(
+              height: 120,
+            ),
+            KeysPage(),
           ],
         ),
       ),

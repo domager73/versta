@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:versta/feature/feedback/ui/feedback_page.dart';
 import 'package:versta/feature/info/ui/info_page.dart';
 import 'package:versta/feature/keys/ui/keys_page.dart';
+import 'package:versta/feature/navbar/navbar_screen.daer.dart';
 
 import 'package:versta/utils/colors.dart';
 import 'package:versta/widgets/buttons/inline_button.dart';
@@ -75,34 +76,71 @@ class _MainScreenState extends State<MainScreen> {
             SizedBox(
               width: sizeof.width,
             ),
-            SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             Container(
               height: 20,
               alignment: Alignment.center,
               width: sizeof.width * 0.7,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: ['ГЛАВНАЯ', '3-6 ЛЕТ', '1-4 КЛАСС', '5-11 КЛАСС', 'ВЗРОСЛЫЕ', 'ДОП. КУРСЫ', 'АКЦИИ', 'О НАС'].map((e) => Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Text(
-                        e,
-                        style: const TextStyle(fontSize: 13),
-                      ),
-                )).toList(),
+                children: [
+                  'ГЛАВНАЯ',
+                  '3-6 ЛЕТ',
+                  '1-4 КЛАСС',
+                  '5-11 КЛАСС',
+                  'ВЗРОСЛЫЕ',
+                  'ДОП. КУРСЫ',
+                  'АКЦИИ',
+                  'О НАС'
+                ]
+                    .map((e) => Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Text(
+                            e,
+                            style: const TextStyle(fontSize: 13),
+                          ),
+                        ))
+                    .toList(),
               ),
             ),
-            SizedBox(height: 20,),
-            IntroPage(),
-            SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
+            const IntroPage(),
+            const SizedBox(
+              height: 20,
+            ),
             const InfoPage(),
             const SizedBox(
               height: 120,
             ),
-            KeysPage(),
+            const KeysPage(),
             const SizedBox(
               height: 120,
             ),
             FeedbackPage(),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 495,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/block 13.png'))),
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 495,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/block 14.png'))),
+                ),
+                Navbar(),
+              ],
+            ),
           ],
         ),
       ),

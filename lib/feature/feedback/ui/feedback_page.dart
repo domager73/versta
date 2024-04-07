@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:versta/utils/fonts.dart';
 import 'package:versta/widgets/wrapper/wrapper.dart';
 
 class FeedbackPage extends StatefulWidget {
@@ -73,7 +74,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
         children: [
           Row(
             children: [
-              const Text("Отзывы"),
+               Text("Отзывы",),
               const Spacer(),
               IconButton(
                   onPressed: previousPage, icon: const Icon(Icons.arrow_back)),
@@ -97,7 +98,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
             height: 40,
           ),
 
-          
+
         ],
       ),
     );
@@ -123,7 +124,7 @@ class FeedbackWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(sender),
+          Text(sender,),
           Text(
             text,
             maxLines: 7,

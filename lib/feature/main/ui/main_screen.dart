@@ -76,7 +76,7 @@ class _MainScreenState extends State<MainScreen> {
             SizedBox(
               width: sizeof.width,
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
             Container(
@@ -96,7 +96,7 @@ class _MainScreenState extends State<MainScreen> {
                   'О НАС'
                 ]
                     .map((e) => Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Text(
                             e,
                             style: const TextStyle(fontSize: 13),
@@ -105,18 +105,18 @@ class _MainScreenState extends State<MainScreen> {
                     .toList(),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
-            const IntroPage(),
-            const SizedBox(
+            IntroPage(),
+            SizedBox(
               height: 20,
             ),
             const InfoPage(),
             const SizedBox(
               height: 120,
             ),
-            const KeysPage(),
+            KeysPage(),
             const SizedBox(
               height: 120,
             ),

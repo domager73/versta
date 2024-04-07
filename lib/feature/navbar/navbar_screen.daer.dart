@@ -5,8 +5,9 @@ class Navbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final sizeof = MediaQuery.sizeOf(context);
     return Container(
-      width: double.infinity,
+      width: sizeof.width,
       height: 495,
       decoration: const BoxDecoration(
           image: DecorationImage(

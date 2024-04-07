@@ -125,14 +125,14 @@ class _MainScreenState extends State<MainScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: double.infinity,
+                  width: sizeof.width,
                   height: 495,
                   decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('assets/block 13.png'))),
                 ),
                 Container(
-                  width: double.infinity,
+                  width: sizeof.width,
                   height: 495,
                   decoration: const BoxDecoration(
                       image: DecorationImage(

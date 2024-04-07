@@ -64,14 +64,16 @@ class KeysItemWidget extends StatelessWidget {
 
     List<Widget> content = [
       Image.asset("assets/invalidi.png"),
-      SizedBox(
-        width: size.width * 0.4,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(title),
-            Text(text),
-          ],
+      FittedBox(
+        child: SizedBox(
+          width: size.width * 0.4,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(title),
+              Text(text),
+            ],
+          ),
         ),
       )
     ];

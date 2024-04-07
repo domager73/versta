@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'package:versta/feature/info/ui/info_page.dart';
 
 import 'package:versta/utils/colors.dart';
 
@@ -21,6 +23,16 @@ class _MainScreenState extends State<MainScreen> {
           children: [
             Image.asset('logo.png', width: sizeof.width * 0.2, height: sizeof.width * 0.06,),
 
+          ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(width: sizeof.width,),
+            InfoPage(),
+            const SizedBox(height: 120,),
           ],
         ),
       ),

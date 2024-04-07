@@ -1,7 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:versta/feature/feedback/ui/feedback_page.dart';
 import 'package:versta/feature/info/ui/info_page.dart';
-import 'package:versta/feature/keys/ui/keys_page.dart';
 
 import 'package:versta/utils/colors.dart';
 
@@ -20,14 +20,47 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.appbar,
-        title: Row(
-          children: [
-            Image.asset(
-              'logo.png',
-              width: sizeof.width * 0.2,
-              height: sizeof.width * 0.06,
-            ),
-          ],
+        title: Container(
+          width: sizeof.width * 0.6,
+          child: Row(
+            children: [
+              Container(
+                constraints: const BoxConstraints(maxWidth: 202, maxHeight: 60),
+                child: Image.asset(
+                  'logo.png',
+                  width: sizeof.width * 0.2,
+                  height: sizeof.width * 0.06,
+                ),
+              ),
+              const Spacer(),
+              CustomInlineButton(
+                text: 'Пройти онлайн-тест',
+                onTap: () {},
+                height: sizeof.width * 0.043,
+              ),
+              const SizedBox(
+                width: 15,
+              ),
+              CustomInlineButton(
+                text: 'Записаться на пробные уроки',
+                onTap: () {},
+                height: sizeof.width * 0.043,
+              ),
+              const Spacer(),
+              const Column(
+                children: [
+                  Text(
+                    '+7 (495) 142-42-59',
+                    style: TextStyle(fontSize: 13),
+                  ),
+                  Text(
+                    '+7 (495) 142-42-59',
+                    style: TextStyle(fontSize: 13),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
       body: SingleChildScrollView(

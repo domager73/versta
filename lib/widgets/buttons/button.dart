@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:versta/utils/colors.dart';
 
 class CustomInlineButton extends StatelessWidget {
   const CustomInlineButton(
       {super.key,
-        required this.text,
-        required this.onTap,
-        this.color,
-        this.height,
-        this.width});
+      required this.text,
+      required this.onTap,
+      this.color,
+      this.height,
+      this.width});
 
   final String text;
   final VoidCallback onTap;
@@ -17,10 +18,8 @@ class CustomInlineButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-        onPressed: onTap,
-        style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.zero,),
+    return InkWell(
+        onTap: onTap,
         child: Container(
           height: height ?? 67,
           width: width ?? double.infinity,
